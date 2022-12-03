@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Bubblesort {
+    static int arr[];
+    static int n;
+    public static void main(String[] args) {
+        System.out.print("Enter the number of element in array : ");
+        //Scanner sc1 = new Scanner(System.in);
+        n = 6;
+        arr = new int[n];
+        int arr[] = {5,7,1,9,11,4};
+
+//        for (int i = 0; i< n ; i++)
+//        {
+//            System.out.print("enter data : ");
+//            arr[i] = sc1.nextInt();
+//        }
+//        System.out.println("");
+//        for (int i = 0; i< n ; i++)
+//            System.out.print(arr[i]+" ");
+
+        int temp;
+        for(int i=0; i<n-1 ; i++) {
+
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("");
+        for (int i = 0; i< n ; i++)
+            System.out.print(arr[i]+" ");
+    }
+}
